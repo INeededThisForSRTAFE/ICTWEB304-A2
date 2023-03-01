@@ -48,7 +48,7 @@ body {
 	}
 }
 // in contrast, mobile screens have a taller screen not really wider than 700px
-@media (max-aspect-ratio: 1/1) and (max-width: 700px) {
+@media (max-aspect-ratio: 1/1) and (min-width: 700px) {
 	.mainBar {
 		background: blue;
 	}
