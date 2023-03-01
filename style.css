@@ -41,12 +41,12 @@ body {
   box-sizing: border-box;
 }
 
-@media (min-aspect-ratio: 1/1) and (min-width: 700px) {
+@media (min-aspect-ratio: 1/1) {
   .mainBar {
     background: red;
   }
 }
-@media (max-aspect-ratio: 1/1) and (min-width: 700px) {
+@media (max-aspect-ratio: 1/1) {
   .mainBar {
     background: blue;
   }
