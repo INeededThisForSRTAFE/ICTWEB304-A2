@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FAQ | Bunbury Plants</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	</head>
+	<body>
+		<header class="mainBar">
+			<a class="homeLink" href="index.html">
+				<!-- logo links to homepage -->
+				<img class="logo" src="images/logo.png" alt="Bunbury Plants Logo">
+				<!-- sitename links to homepage -->
+				<h1 class="siteName">Bunbury Plants</h1>
+			</a>
+			<!-- below a certain width, menu takes up full page width rather than a dropdown pinned to right -->
+			<nav class="menuContainer">
+				<input id="menuToggle" type="checkbox"/>
+				<label class="menuIconContainer" for="menuToggle">
+					<div class="menuIcon"></div>
+				</label>
+				<div class="menu">
+					<a href="index.html">Home Page</a>
+					<a href="shop.html">Shop</a>
+					<a href="#">FAQ</a>
+					<a href="contactus.html">Contact Us</a>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<ol class="faqList">
+				<div class="faqQWrapper">
+					<input id="faq1" type="checkbox" class="faqCheckbox"/>
+					<li class="faqQHeader">
+						<span class="faqQ">How do I grow the Good Stuff?</span>
+						<label class="dropdownIconContainer" for="faq1">
+							<div class="dropdownIcon"></div>
+						</label>
+					</li>
+					<div class="faqA">What are you talking about bro just put it in the ground</div>
+				</div>
+				<div class="faqQWrapper">
+					<input id="faq2" type="checkbox" class="faqCheckbox"/>
+					<li class="faqQHeader">
+						<span class="faqQ">That's a bad answer!</span>
+						<label class="dropdownIconContainer" for="faq2">
+							<div class="dropdownIcon"></div>
+						</label>
+					</li>
+					<!-- TODO: ADD TABLE FOR GROWING TIMES! -->
+					<div class="faqA">That's not a question!</div>
+				</div>
+			</ol>
+		</main>
+		<footer>
+			<div>Don't use this as a website. If you scan this and consider it to be plagerism; talk to me about it.</div>
+		</footer>
+	</body>
+</html>
