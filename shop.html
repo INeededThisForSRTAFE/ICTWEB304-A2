@@ -27,11 +27,62 @@
 				</div>
 			</nav>
 		</header>
-		<main>
-
+		<main class="shopMain">
+			<div class="filters">
+				<span>filters filler text blah blah<br>pretend there's something here</span>
+			</div>
+			<div class="shopItemsContainer">
+				<div class="itemsHeader">
+					<h2>Items</h2>
+					<div class="itemsOptions">
+						<input id="layoutToggle" onclick="toggleGrid()" type="checkbox"/>
+						<label class="layoutToggleIconContainer" for="layoutToggle">
+							<div class="layoutToggleIcon">
+								<div></div>
+								<div></div>
+							</div>
+						</label>
+					</div>
+				</div>
+				<div id="items" class="grid">
+					<div class="shopItem">
+						<img class="itemImg" src="images/shopPot.png" alt="Flower Pot">
+						<span class="itemNameContainer">
+							<div>
+								<span class="itemName">Flower Pot</span>
+								<span class="itemModel">FP001</span>
+							</div>
+							<span class="itemDesc">A lovely little pot to hold a blossoming plant.</span>
+						</span>
+						<span class="itemPrice">$5</span>
+						<input class="itemAdd" type="button" value="Add to cart">
+					</div>
+					<div class="shopItem">
+						<img class="itemImg" src="images/shopSeeds.png" alt="Clover Seeds">
+						<span class="itemNameContainer">
+							<div>
+								<span class="itemName">Clover Seeds (20g)</span>
+								<span class="itemModel">SE-Clvr-20</span>
+							</div>
+							<span class="itemDesc">You might get lucky growing a 4-leafed clover!</span>
+						</span>
+						<span class="itemPrice">$2</span>
+						<input class="itemAdd" type="button" value="Add to cart">
+					</div>
+				</div>
+			</div>
 		</main>
 		<footer>
-			<div>Don't use this as a website. If you scan this and consider it to be plagerism; talk to me about it.</div>
+			<span>Don't use this as a website. If you scan this and consider it to be plagiarism; talk to me about it.</span>
+			<a href="https://github.com/INeededThisForSRTAFE/ICTWEB304-A2">Github Repo</a>
+			<a href="sitemap.html">Sitemap</a>
 		</footer>
+		<script>
+			itms = document.getElementById("items")
+			function toggleGrid() {
+				itms.classList.toggle("grid");
+				itms.classList.toggle("list");
+			}
+		</script>
 	</body>
 </html>

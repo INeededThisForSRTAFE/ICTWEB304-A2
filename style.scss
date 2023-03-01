@@ -8,6 +8,7 @@
 
 body {
 	margin: 0;
+	background-color: #d5ffe0;
 }
 
 .homeLink {
@@ -103,6 +104,179 @@ footer {
 
 .fakeLink {
 	cursor: not-allowed;
+}
+
+.contactMain {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 80px;
+}
+
+.contactFlex {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	align-self: flex-start;
+	padding-bottom: 20px;
+}
+
+.contactHeader {
+	margin: 0 0 1.33em;
+}
+
+.pageList {
+	padding: 20px 80px;
+}
+
+.shopMain {
+	display: flex;
+	flex-direction: row;
+	padding: 20px 80px;
+	gap: 20px;
+}
+.itemsHeader {
+	display: flex;
+	flex-wrap: nowrap;
+	h2 {
+		flex: 1 1 auto;
+		margin-top: 0;
+	}
+}
+.itemsOptions {
+	float: right;
+}
+// they both use flex. it's easier.
+.list,.grid {
+	display: flex;
+	gap: 10px;
+}
+.list {
+	flex-direction: column;
+	flex-wrap: nowrap;
+	.shopItem {
+		height: 120px;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+	}
+	.itemImg {
+		flex: 0 0 auto;
+		max-height: 100px;
+		max-width: 100px;
+	}
+}
+// grid
+.grid {
+	flex-direction: row;
+	.shopItem {
+		flex-direction: column;
+		height: 400px;
+		width: 400px;
+	}
+	.itemImg {
+		height: 250px;
+		width: auto;
+		align-self: center;
+	}
+	.itemNameContainer {
+		order: 1;
+	}
+	.itemPrice {
+		order: 0;
+	}
+	.itemAdd {
+		order: 2;
+	}
+	.itemModel {
+		float: right;
+	}
+}
+// shared for both grid and list
+.shopItem {
+	display: flex;
+	flex-wrap: nowrap;
+	font-size: 18px;
+	box-sizing: border-box;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 16px;
+}
+.itemNameContainer {
+	flex: 1 1 auto;
+}
+.itemName {
+	max-height: 100px;
+}
+.itemModel {
+	color: #333;
+	font-size: 12px;
+	font-style: italic;
+}
+.shopItemsContainer {
+	flex: 1 1 auto;
+}
+.filters {
+	flex: 0 0 100px;
+	background-color: #7771;
+	height: fit-content;
+}
+
+// more reused stuff - list/grid button. default grid.
+.layoutToggleIconContainer {
+	display: flex;
+	cursor: pointer;
+	height: 30px;
+	width: 30px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	float: right;
+	align-self: center;
+	padding-right: 10px;
+}
+.layoutToggleIcon {
+	display: inline-flex;
+	gap: 4px;
+	>div {
+		display: inline-flex;
+		gap: 4px;
+		flex-direction: column;
+		&::before,&::after {
+			content: "";
+			width: 8px;
+			height: 8px;
+			background: #000;
+			border-radius: 3px;
+		}
+	}
+}
+#layoutToggle {
+	display: none;
+	&:checked {
+		&+label>div {
+			flex-direction: column;
+			gap: 2px;
+			&>div {
+				gap: 2px;
+				&::before, &::after {
+					width: 20px;
+					height: 4px;
+				}
+			}
+		}
+	}
+}
+
+.faqTable {
+	border: 2px solid black;
+	border-collapse: collapse;
+	td, th {
+		border: 1px solid black;
+	}
+	th {
+		text-align: left;
+	}
 }
 
 // some of this is reused from menuIcon below :)

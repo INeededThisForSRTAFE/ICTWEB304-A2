@@ -27,21 +27,52 @@
 				</div>
 			</nav>
 		</header>
-		<main>
-			<span>Phone</span>
-			<a class="fakeLink" href="#">0491 570 156</a> <!-- Ficticus number. -->
-
-			<span>Email us</span>
-			<a class="fakeLink" href="#">aaa</a> <!-- There's no email. -->
-
-			<span>Address</span>
-			<address>57 Mensonge Lane<br>Bunbury, WA<br>6230</address> <!-- It's a lie. -->
-
-			<span>Hours</span>
-			<span>Monday - Friday<br>9:00am - 3:00pm<br>Saturday<br>10:00am - 1:00pm<br>Sunday<br>Closed</span> <!-- This place doesn't exist. -->
+		<main class="contactMain">
+			<div class="contactFlex">
+				<div>
+					<h4 class="contactHeader">Phone</h4>
+					<a class="fakeLink" href="#">0491 570 156</a> <!-- Ficticus number. -->
+				</div>
+				<div>
+					<h4 class="contactHeader">Email us</h4>
+					<a class="fakeLink" href="#">bunbury.plants@example.com</a> <!-- There's no email. -->
+				</div>
+				<div>
+					<h4 class="contactHeader">Address</h4>
+					<address>57 Mensonge Lane<br>Bunbury, WA<br>6230</address> <!-- It's a lie. -->
+				</div>
+				<div>
+					<h4 class="contactHeader">Hours</h4>
+					<span>Monday - Friday<br>9:00am - 3:00pm<br><br>Saturday<br>10:00am - 1:00pm<br><br>Sunday<br>Closed</span> <!-- This place doesn't exist. -->
+				</div>
+			</div>
+			<div>
+				<i>This form doesn't do anything. It was required for demonstration only. No backend exists.</i>
+				<form>
+					<label for="name">Your Name:</label><br>
+					<input type="text" id="name" name="name" required placeholder="John Smith"><br>
+					<label for="email">Your Email:</label><br>
+					<input type="email" id="email" name="email" required placeholder="john.smith@example.com" autocomplete="off"><br>
+					<label for="phone">Your Phone Number (optional):</label><br>
+					<!--
+					Pattern below is for the following patterns: XXXX[space or dash]XXX[space or dash]XXX OR (10 digits in a row) OR 0X[space or dash]XXXX[space or dash]XXXX OR XXXX[space or dash]XXXX OR (8 digits in a row)
+					Example: 0491-570-156, 0491 570 156, 0491570156, 0491-570 156 == valid, mobile numbers (these CAN start as 040*)
+					Example: 02 5550 1234, 03-5550 1234, 0755501234 == valid, interstate numbers (these CANNOT start as 0X0*)
+					also the 06* or 09* numbers don't exist
+					Example: 06 1234 5678 == Not valid, "interstate" style (06 doesn't exist)
+					Example: 55501234, 5550 1234 == not valid but real intrastate numbers
+					-->
+					<input type="tel" id="phone" name="phone" pattern="[0][0-578][0-9]{2}(-| )[0-9]{3}(-| )[0-9]{3}|[0][0-578][0-9]{8}" placeholder="0491 570 156" autocomplete="off"><br>
+					<label for="contents">Message:</label><br>
+					<input type="text" id="contents" name="contents" class="message" minlength="1" maxlength="1000" required placeholder="Enter your message here." size="100"><br><br>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
 		</main>
 		<footer>
-			<div>Don't use this as a website. If you scan this and consider it to be plagerism; talk to me about it.</div>
+			<span>Don't use this as a website. If you scan this and consider it to be plagiarism; talk to me about it.</span>
+			<a href="https://github.com/INeededThisForSRTAFE/ICTWEB304-A2">Github Repo</a>
+			<a href="sitemap.html">Sitemap</a>
 		</footer>
 	</body>
 </html>
