@@ -456,7 +456,7 @@ footer {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  right: 0;
+  right: 1px;
   top: 56px;
 }
 #menuToggle:checked ~ div > a {
