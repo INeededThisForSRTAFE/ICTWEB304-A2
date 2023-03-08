@@ -64,6 +64,10 @@ body {
     white-space: nowrap;
   }
 }
+.bodyText {
+  margin: 0 10px;
+}
+
 .articles {
   display: flex;
   flex-direction: row;
